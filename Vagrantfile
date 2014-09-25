@@ -13,6 +13,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell",
     inline: "sudo apt-get update --yes"
 
+  config.vm.provision "shell",
+    inline: "puppet module install puppetlabs-stdlib"
+
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
   config.vm.synced_folder "data/", "/vagrant", id: "vagrant-root", owner: "www-data", group: "www-data"

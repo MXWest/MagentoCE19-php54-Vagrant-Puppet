@@ -18,6 +18,12 @@ class apache2( $document_root ) {
   file { "/etc/apache2/sites-enabled/000-default-ssl":
     ensure => link,
     target => "../sites-available/vagrant-default-ssl",
+  } -> file_line { "xdebug_remote_enable":
+    path => "/etc/php5/conf.d/20-xdebug.ini",
+    line => "xdebug.remote_enable = on",
+  } -> file_line { "xdebug_remote_connect_back":
+    path => "/etc/php5/conf.d/20-xdebug.ini",
+    line => "xdebug.remote_connect_back = on",
   } ->
   service { "apache2":
     ensure     => running,
