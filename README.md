@@ -1,4 +1,4 @@
-#Magento CE 1.9.0.1 Php 5.4 Vagrant Puppet 
+# Magento CE 1.9.0.1 Php 5.4 Vagrant Puppet 
 
 Installs Magento CE 1.9.0.1, on php 5.4.
 Running on Debian 7.5 “Wheezy” Distro vagrant box.
@@ -21,15 +21,15 @@ this in your etc/hosts file should do it:
 127.0.0.1	localhost magento.localhost 
 ```
 
-##Prerequisites
+## Prerequisites
 * VirtualBox (I used 4.3.16 r95972 to put this together)
 * Vagrant (I used 1.6.5 to put this together)
 
-#XDebug Support
+# XDebug Support
 
 Xdebug is enabled and running.
 
-##NetBeans
+## NetBeans
 I first used NetBeans for Magento debugging because it was free and it worked. I continue to do so because it's free and it works.
 
 This setup worked in my environment, which is:
@@ -50,7 +50,7 @@ Asuming you're setup - as you should be - such that your vagrant box is serving 
 * **Add path mapping** (```Project Properties->Run Configuration->Advanced```) to map the shared directory: ``` Server Path: /vagrant/ => Project Path: /PATH_TO_YOUR_VAGRANT/data/ ```
 
 
-#Acknowledgement
+# Acknowledgement
 
 This project was originally forked from work done by Christian Münch at https://github.com/cmuench. Specifically it was based on Christian's Magento Vagrant Puppet (https://github.com/cmuench/Magento-Vagrant-Puppet). As there didn't appear to be much activity on it lately, I decided just to roll my own repo on this one.
 
